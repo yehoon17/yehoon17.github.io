@@ -5,7 +5,7 @@ categories: [데이터베이스 , 데이터베이스 관리]
 author: yehoon
 tags: [PostgreSQL, Docker, DevOps]
 render_with_liquid: false
-description: 
+description: Docker로 PostgreSQL 실행하기
 ---
 
 ## 1. Docker 설치
