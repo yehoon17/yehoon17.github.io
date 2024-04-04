@@ -10,6 +10,8 @@ description:
 대량의 queries per second(QPS)를 처리하기 위해, 비동기 작업 관리 및 폭발적인 요청 처리 기술이 필요하다고 한다. 그리고 Kafka 같은 Message Broker가 그 중 하나라고 한다.
 
 일단 개념을 이해하기 위해 영상을 찾아봤다.
+
+
 [System Design: Apache Kafka In 3 Minutes](https://www.youtube.com/watch?v=HZklgPkboro)
  - Kafka는 데이터 생성자(Producer)로부터 데이터를 전달 받아, 데이터 소비자(Consumer)한테 제공한다.
  - 실시간 스트리밍, 대량 프래픽에 유리하다.
@@ -45,6 +47,8 @@ description:
    - "Immutable records of things and write to a log at the very end"  
  - Data Elements
    - Header, Key, Value, timestamp
+
+
 
 
 Next: [Apache Kafka 실습](https://yehoon17.github.io/posts/kafka_practice/)
