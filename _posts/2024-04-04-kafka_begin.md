@@ -1,6 +1,6 @@
 ---
 title: Apache Kafka 입문
-date: 2024-04-04 12:00:00 +/-09:00
+date: 2024-04-04 11:00:00 +/-09:00
 categories: [데이터파이프라인]
 author: yehoon
 tags: [Kafka, DevOps]
@@ -49,6 +49,6 @@ description:
    - Header, Key, Value, timestamp
 
 
-
+---
 
 Next: [Apache Kafka 실습](https://yehoon17.github.io/posts/kafka_practice/)
