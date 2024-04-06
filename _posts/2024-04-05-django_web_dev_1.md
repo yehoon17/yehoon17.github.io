@@ -67,8 +67,10 @@ python manage.py startapp recipes
 
 
 ### 2.3. 에러 해결 
-1. 커스텀 User 사용 에러 [해결](https://github.com/yehoon17/recipe_management_system/commit/5f1f20042db595bff933d9f14baa1140b4540ab0)
-   `auth.User.groups: (fields.E304) Reverse accessor 'Group.user_set' for 'auth.User.groups' clashes with reverse accessor for 'recipes.User.groups'.` 
+1. 커스텀 User 사용 에러 [해결](https://github.com/yehoon17/recipe_management_system/commit/5f1f20042db595bff933d9f14baa1140b4540ab0)  
+   
+> auth.User.groups: (fields.E304) Reverse accessor 'Group.user_set' for 'auth.User.groups' clashes with reverse accessor for 'recipes.User.groups'.
+{: .prompt-warning }
 
 ## 3. 결과
 ![1일차 홈페이지](assets/img/homepage_1.png)

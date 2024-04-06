@@ -31,7 +31,7 @@ description: Django 기반 웹 개발
 
 ## 3. 레시피 편집 개선
 레시피 생성할 때, 재료와 태그가 이미 존재하더라도 새로 생성하는 것을 확인했다.  
-그래서 재료와 태그의 속성을 중복 불가하게 수정했다.
+그래서 재료와 태그의 속성을 중복 불가하게 수정했다.  
 그리고 레시피 생성할 때 재료와 태그가 이미 존재하면 존재하는 데이터를 가져오게 구현했다.   
 
 [수정한 내용](https://github.com/yehoon17/recipe_management_system/commit/0483f6b6015dd31c90564d0983cd8dfbcc5964f2)
@@ -41,9 +41,10 @@ description: Django 기반 웹 개발
 [2일차 코드](https://github.com/yehoon17/recipe_management_system/tree/e976d63ad7bd29bbef95149306d6c210c56d61f2)
 
 레시피 데이터 생성를 생성하는 데 llama API와 function calling을 적용해보려고 했다.  
-그러나 결과의 퀄리티가 별로여서 ChatGPT로 생성한 데이터로 사용했다. 
-바로 ChatGPT로 생성한 데이터를 사용했다면 2일차 안에 핵심 기능은 전부 구현했을 것이다.
-그래도 function calling에 대해 알아보는 [유익한 경험](https://github.com/yehoon17/recipe_management_system/blob/llama_api/data_generation/llama_api/api_test.ipynb)을 했다.
+그러나 결과의 퀄리티가 별로여서 ChatGPT로 생성한 데이터로 사용했다.   
+바로 ChatGPT로 생성한 데이터를 사용했다면 2일차 안에 핵심 기능은 전부 구현했을 것이다.  
+그래도 function calling에 대해 알아보는 [유익한 경험](https://github.com/yehoon17/recipe_management_system/blob/llama_api/data_generation/llama_api/api_test.ipynb)을 했다.  
+
 
 
 # TODO
