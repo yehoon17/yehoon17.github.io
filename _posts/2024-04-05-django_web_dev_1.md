@@ -60,6 +60,15 @@ python manage.py startapp recipes
    1. 로그인 되었을 때, 레시피 생성 가능
    2. 로그인된 계정이 작성한 레시피만 편집 및 제거 가능
    3. 테이블 형식에 재료 입력, 행 추가 및 제거 가능
+8. [GraphQL 시작](https://github.com/yehoon17/recipe_management_system/commit/420cdf9f9b9a4e4b4f2f11e76e4e19609b313c18)
+   1. 모든 레시피 조회, 모든 재료 조회하는 Query 생성
+   2. URL 설정
+   3. `settings.py` 설정
+
+
+### 2.3. 에러 해결 
+1. 커스텀 User 사용 에러 [해결](https://github.com/yehoon17/recipe_management_system/commit/5f1f20042db595bff933d9f14baa1140b4540ab0)
+   `auth.User.groups: (fields.E304) Reverse accessor 'Group.user_set' for 'auth.User.groups' clashes with reverse accessor for 'recipes.User.groups'.` 
 
 ## 3. 결과
 ![1일차 홈페이지](assets/img/homepage_1.png)
@@ -80,12 +89,12 @@ _레시피 조회_
 
 
 ## 4. TODO
- - 전체 레시피 조회
- - 레시피 검색
- - 레시피 태그
- - 로그인 안 되어있을 때, 레시피 생성 버튼 클릭시 로그인 화면으로 전환
- - 이미지 등록 안된 레시피에 default 이미지 적용
- - 스타일 
+ - [ ] 전체 레시피 조회
+ - [ ] 레시피 검색
+ - [ ] 레시피 태그
+ - [ ] 로그인 안 되어있을 때, 레시피 생성 버튼 클릭시 로그인 화면으로 전환
+ - [ ] 이미지 등록 안된 레시피에 default 이미지 적용
+ - [ ] 스타일 
 
 ---
 
