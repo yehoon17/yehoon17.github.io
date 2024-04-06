@@ -1,6 +1,6 @@
 ---
 title: Apache Kafka 실습
-date: 2024-04-04 12:00:00 +/-09:00
+date: 2024-04-04 12:00:00 +09:00
 categories: [데이터파이프라인]
 author: yehoon
 tags: [Kafka, Docker, DevOps, Python]

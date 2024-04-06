@@ -1,6 +1,6 @@
 ---
 title: Docker로 PostgreSQL 실행하기
-date: 2024-04-04 09:00:00 +/-09:00
+date: 2024-04-04 09:00:00 +09:00
 categories: [데이터베이스 , 데이터베이스 관리]
 author: yehoon
 tags: [PostgreSQL, Docker, DevOps]
