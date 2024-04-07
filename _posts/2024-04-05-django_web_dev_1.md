@@ -10,24 +10,24 @@ description: Django 기반 웹 개발
 단기간 안에 Django 기반 웹을 개발해보기로 했다.  
 주제는 요리 레시피 블로그로 정했다.  
 
-# 개발 1일차
-## 1. 프로젝트 기획
-### 개요
+## 개발 1일차
+### 1. 프로젝트 기획
+#### 개요
 Django와 GraphQL로 구축된 레시피 관리 시스템  
 사용자는 레시피를 생성, 조회, 편집 및 삭제와 레시피 검색 가능 
 
-### 기능
+#### 기능
 - 사용자 인증: 사용자는 회원가입, 로그인 및 로그아웃하여 자신의 레시피를 관리할 수 있습니다.
 - 레시피 CRUD 작업: 사용자는 레시피를 생성, 조회, 편집 및 삭제할 수 있습니다.
 - 태깅: 레시피에 카테고리를 추가하여 조직 및 필터링이 쉽도록 합니다.
 - 평가 시스템: 사용자는 1에서 5까지의 별점으로 레시피를 평가할 수 있습니다.
 - 검색 기능: 사용자는 제목, 재료 또는 태그를 기준으로 레시피를 검색할 수 있습니다.
 
-### ER 다이어그램
+#### ER 다이어그램
 ![erd](https://github.com/yehoon17/recipe_management_system/blob/master/document/er_diagram.png?raw=true)
 
-## 2. 개발
-### 2.1. 환경 설정
+### 2. 개발
+#### 2.1. 환경 설정
 **git 생성**
 ```bash
 git init
@@ -49,7 +49,7 @@ python manage.py startapp recipes
 ```
 
 
-### 2.2. 구현
+#### 2.2. 구현
 1. Django 모델 생성
 2. URL 설정
 3. HTML 생성
@@ -66,13 +66,13 @@ python manage.py startapp recipes
    3. `settings.py` 설정
 
 
-### 2.3. 에러 해결 
+#### 2.3. 에러 해결 
 1. 커스텀 User 사용 에러 [해결](https://github.com/yehoon17/recipe_management_system/commit/5f1f20042db595bff933d9f14baa1140b4540ab0)  
    
 > auth.User.groups: (fields.E304) Reverse accessor 'Group.user_set' for 'auth.User.groups' clashes with reverse accessor for 'recipes.User.groups'.
 {: .prompt-warning }
 
-## 3. 결과
+### 3. 결과
 ![1일차 홈페이지](assets/img/homepage_1.png)
 _홈페이지_
 
@@ -90,7 +90,7 @@ _레시피 조회_
 [1일차 코드](https://github.com/yehoon17/recipe_management_system/tree/d7bd211731c0bb64fe13912535995f9b79e69177)
 
 
-## 4. TODO
+### 4. TODO
  - [ ] 전체 레시피 조회
  - [ ] 레시피 검색
  - [ ] 레시피 태그
