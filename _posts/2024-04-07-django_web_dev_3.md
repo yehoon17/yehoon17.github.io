@@ -32,7 +32,8 @@ description: Django 기반 웹 개발
 ### 5. Rating 구현
 1. 레시피의 Rating 평균 계산하여 display
 2. 로그인되어 있다면, Rating 입력
-3. 로그인 안 되어 있다면, Rating 입력 시도할 경우 로그인 화면으로 redirect
+3. 로그인 안 되어 있다면, Rating 입력 시도할 경우 로그인 화면으로 redirect  
+   
 [Merge pull request #3 from yehoon17/rating](https://github.com/yehoon17/recipe_management_system/commit/2b3e9c264d4bcce259ba4b41eb12183979b63a54)
 
 ### 6. GraphQL 구현
@@ -48,7 +49,7 @@ description: Django 기반 웹 개발
 [Merge pull request #4 from yehoon17/graphql](https://github.com/yehoon17/recipe_management_system/commit/ca208b8bee6db0b4b25a7aa2adb3d07b32eeea1f)
    
 ### 7. 스타일링
-작업 브랜치: [style](https://github.com/yehoon17/recipe_management_system/tree/style)
+작업 브랜치: [style](https://github.com/yehoon17/recipe_management_system/tree/style)   
 HTML/CSS로 스타일 적용
 
 ### 8. Docker containerize
