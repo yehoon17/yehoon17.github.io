@@ -12,7 +12,7 @@ description: REST API와 GraphQL API 비교
 작업 브랜치: [restapi](https://github.com/yehoon17/recipe_management_system/tree/restapi)
 
 ## REST API 구현
-1. `Recipe`, `Ingredient`, `RecipeIngredient에` 대한 Serializer 생성
+1. `Recipe`, `Ingredient`, `RecipeIngredient`에 대한 Serializer 생성
    
 
 ```python
