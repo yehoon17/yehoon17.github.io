@@ -73,18 +73,18 @@ python manage.py startapp recipes
 {: .prompt-warning }
 
 ### 3. 결과
-![1일차 홈페이지](assets/img/homepage_1.png)
+![1일차 홈페이지](assets/img/recipe/homepage_1.png)
 _홈페이지_
 
-![create recipe](assets/img/recipe_create_1.png)
+![create recipe](assets/img/recipe/create_1.png)
 _레시피 생성_
 
 
-![ingredient_table_1](assets/img/ingredient_table_1.png)
+![ingredient_table_1](assets/img/recipe/ingredient_table_1.png)
 _재료 입력_
 
 
-![recipe detail](assets/img/recipe_detail_1.png)
+![recipe detail](assets/img/recipe/detail_1.png)
 _레시피 조회_
 
 [1일차 코드](https://github.com/yehoon17/recipe_management_system/tree/d7bd211731c0bb64fe13912535995f9b79e69177)

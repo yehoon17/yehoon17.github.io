@@ -330,7 +330,7 @@ plt.show()
 
 
     
-![png](assets/img/breast_cancer_heatmap.png)
+![png](assets/img/graph/breast_cancer_heatmap.png)
     
 
 
@@ -483,7 +483,7 @@ plt.show()
 
 
     
-![png](assets/img/breast_cancer_boxplot.png)
+![png](assets/img/graph/breast_cancer_boxplot.png)
     
 
 

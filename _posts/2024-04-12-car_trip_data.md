@@ -271,7 +271,7 @@ plt.show()
 
 
     
-![png](/assets/img/time_to_dist_and_speed.png)
+![png](/assets/img/graph/time_to_dist_and_speed.png)
     
 
 
@@ -286,7 +286,7 @@ plt.show()
 
 
     
-![png](/assets/img/time_to_acc.png)
+![png](/assets/img/graph/time_to_acc.png)
     
 
 
@@ -356,6 +356,6 @@ plt.show()
 
 
     
-![png](/assets/img/time_to_all.png)
+![png](/assets/img/graph/time_to_all.png)
     
 

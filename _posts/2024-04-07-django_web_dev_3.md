@@ -21,7 +21,7 @@ description: Django 기반 웹 개발
 
 ### 2. 레시피 전체 조회 페이지 
 [Merge branch 'recipe_list'](https://github.com/yehoon17/recipe_management_system/commit/326030af926f1664bfe5c386daf2d9d75bc22324)
-![recipe](assets/img/recipe_list_all.png)
+![recipe](assets/img/recipe/list_all.png)
 
 ### 3. 태그로 레시피 조회
 [Implemented feature to display all recipes associated with a clicked tag](https://github.com/yehoon17/recipe_management_system/commit/5e487d87e0d33789b3d5d4ce35932f9f9d5e6e73)
