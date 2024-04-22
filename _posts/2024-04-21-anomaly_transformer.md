@@ -45,7 +45,7 @@ Taxonomy: 분류학
 ### 1 Introduction
 <details>
     <summary>
-    시계열 이상탐지는 복잡한 시간적 역학관계에서 의미있는 특징을 추출하고 희귀한 이상점을 구별할 수 있는 기준을 도출하는 것이 관건
+    시계열 이상탐지는 <ins>복잡한 시간적 역학관계</ins>에서 의미있는 특징을 추출하고 <ins>희귀한 이상점</ins>을 구별할 수 있는 기준을 도출하는 것이 관건
     </summary>
     <blockquote>
     시계열에서의 이상탐지는 산업에서 중요하지만 이상점이 드물기 때문에 난이도와 비용적인 측면에서 데이터 라벨링하기 어렵다. 따라서 비지도 방식으로 눈을 돌렸지만, 복잡한 시간적 역학관계에서 의미있는 특징을 추출해야면서 희귀한 이상점을 구별할 수 있는 기준을 도출해야 하기 때문에 이 또한 어렵긴 하다. 
@@ -212,7 +212,7 @@ $$\text{AssDis}(P, S; X ) \in \mathbb{R}^{N×1}$$ 은 $$X$$의 prior-association
 비지도 학습 과제로, 우리는 모델을 최적화하기 위해 reconstruction loss을 사용한다.  
 reconstruction loss은 series-association이 가장 정보를 제공하는 연관을 찾도록 안내한다.  
 정상 및 이상점 사이의 차이를 더 크게 만들기 위해, 우리는 association discrepancy을 확대하기 위해 추가 손실을 사용한다. 
-prior-association의 unimodal 특성으로 인해, discrepancy loss은 series-association이 비인접 영역에 더 많은 관심을 기울이도록 안내한다. 이는 이상점의 reconstruction을 어렵게 만들고 이상점을 더 잘 식별할 수 있도록 한다다.
+prior-association의 unimodal 특성으로 인해, discrepancy loss은 series-association이 비인접 영역에 더 많은 관심을 기울이도록 안내한다. 이는 이상점의 reconstruction을 어렵게 만들고 이상점을 더 잘 식별할 수 있도록 한다.
 입력 시리즈 $$X \in \mathbb{R}^{N×d} $$의 손실 함수는 다음과 같이 같다:
 
 $$  
@@ -222,7 +222,7 @@ L_{\text{Total}}(\hat{X},P, S, \lambda; X ) = \|X - \hat{X}\|^2_F - \lambda × \
 $$  
 
 여기서 $$\hat{X} \in \mathbb{R}^{N×d} $$는 $$X$$의 reconstruction을 나타낸다.  
-$$\|·\|_F$$, $$\|·\|_k$$ 는 Frobenius 및 k-norm 나타낸다다.
+$$\|·\|_F$$, $$\|·\|_k$$ 는 Frobenius 및 k-norm 나타낸다.
 $$\lambda$$는 손실 항목을 교환하는 역할을 한다. $$\lambda > 0$$일 때, 최적화는 association discrepancy을 확대하는 것이다.  
 association discrepancy을 더 구별 가능하게 만들기 위해 minimax 전략이 제안된다.
 
@@ -310,9 +310,9 @@ association discrepancy를 기준으로 사용하는 것만으로도 우수한 �
 Figure 5에서는 다양한 이상점 유형에 대한 association-based 기준의 성능을 시각화한 것을 제공한다.  
 reconstruction 기준과 비교하여 우리 방법은 일관되게 정상 데이터에 대해 더 작은 값이 생성되며 이상점을 효과적으로 강조하고, 이 정밀성은 거짓 양성을 줄여 전체 감지 정확도를 향상시킨다.
 ##### Prior-association visualization
-minimax 최적화 과정에서 학습된 prior-association은 series-association에 가까워지도록 하여, 학습된 매개변수 $$\lambda$$는 시계열 내 인접한 점의 집중도를 반영할 수 있다.  
-그림 6에서 볼 수 있듯이, σ$$\lambda$$는 다양한 데이터 패턴에 적응하여 변화한다.  
-특히, 이상점의 prior-association은 일반적으로 정상 시간점보다 작은 $$\lambda$$를 갖는 경향이 있다.  
+minimax 최적화 과정에서 학습된 prior-association은 series-association에 가까워지도록 하여, 학습된 매개변수 $$\sigma$$는 시계열 내 인접한 점의 집중도를 반영할 수 있다.  
+그림 6에서 볼 수 있듯이, $$\sigma$$는 다양한 데이터 패턴에 적응하여 변화한다.  
+특히, 이상점의 prior-association은 일반적으로 정상 시간점보다 작은 $$\sigma$$를 갖는 경향이 있다.  
 이는 이상점이 더 높은 인접 집중도를 보일 것으로 예상되는 것과 일치한다.
 ##### Optimization strategy analysis
 reconstruction loss만 사용할 경우, 이상 및 정상 시간점은 이웃 시간점에 대해 유사한 association 가중치를 보여 대조 값이 1에 가깝다(Table 3).  
