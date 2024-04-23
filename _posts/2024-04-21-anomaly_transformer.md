@@ -106,7 +106,7 @@ Taxonomy: 분류학
     이전 방법을 넘어서, 우리는 Transfomers를 비지도 시계열 이상점 탐지에 소개하고 연관 학습을 위해 Anomaly Transformer를 제안한다.<br>
     Association Discrepancy를 계산하기 위해, self-attention을 Anomaly-Attention으로 개선하였는데, 이는 각 시간 점의 prior-association과 series-association을 모델링하기 위한 두 개의 branch 구조를 포함한다. <br>
     prior-association은 각 시간 점의 인접 집중 귀납적 편향을 나타내기 위해 학습 가능한 Gaussian kernel을 사용하며, series-association은 원본 시리즈에서 학습된 self-attention 가중치에 해당한다. <br>
-    또한, 두 개의 분기 사이에 minimax 전략을 적용하여 Association Discrepancy의 정상-비정상 구별성을 증폭시키고 새로운 연관 기반 기준을 더 구체화할 수 있습니다.<br>
+    또한, 두 개의 분기 사이에 minimax 전략을 적용하여 Association Discrepancy의 정상-비정상 구별성을 증폭시키고 새로운 연관 기반 기준을 더 구체화할 수 있다.<br>
     Anomaly Transformer는 세 가지 실제 응용 프로그램을 포함하는 여섯 가지 벤치마크에서 뛰어난 결과를 달성하였다.
     </blockquote>
 </details>
@@ -293,14 +293,14 @@ $$\text{AnomalyScore} (X ) \in  \mathbb{R}^{N×1}$$ 은 $$X$$의 점 단위 이�
 #### 4.1 Main Results
 ##### Real-world datasets 
 10 개의 baseline을 사용하여 다섯 개의 실제 데이터셋에서 우리의 모델을 철저히 평가했다.  
-비정상 탐지를 위한 시간 모델링과 연관 학습의 효과를 입증하여, Anomaly Transformer가 모든 벤치마크에서 일관된 SOTA을 달성합니다.  
+비정상 탐지를 위한 시간 모델링과 연관 학습의 효과를 입증하여, Anomaly Transformer가 모든 벤치마크에서 일관된 SOTA을 달성했다.  
 ROC 곡선은 다양한 임계값에 대한 Anomaly Transformer의 뛰어난 성능을 확인하여 실제 응용 가능성을 강조하고 있다.
 ##### NeurIPS-TS benchmark
 이 벤치마크는 모든 이상점 유형을 포괄하며, 지점 및 패턴에 따른 이상점을 모두 포함한다.  
 그럼에도 불구하고, Anomaly Transformer는 여전히 SOTA을 달성할 수 있다.  
 이는 다양한 이상점 유형에 대한 Anomaly Transformer의 효과를 입증했다고 할 수 있다.  
 ##### Ablation study
-표 2에서 모델의 각 부분의 영향을 분석했다.  
+table 2에서 모델의 각 부분의 영향을 분석했다.  
 association-based criterion은 일관되게 널리 사용되는 reconstruction 기준보다 우수한 성능을 보이며, 높은 18.76%의 절대 F1-score 향상을 이끌었다.  
 association discrepancy를 기준으로 사용하는 것만으로도 우수한 성능을 보이며, 이전 SOTA 모델을 뛰어넘는다.  
 학습 가능한 prior-association과 minimax 전략을 도입하여 Anomaly Transformer 모델을 더욱 향상시켰다.
@@ -317,7 +317,7 @@ minimax 최적화 과정에서 학습된 prior-association은 series-association
 ##### Optimization strategy analysis
 reconstruction loss만 사용할 경우, 이상 및 정상 시간점은 이웃 시간점에 대해 유사한 association 가중치를 보여 대조 값이 1에 가깝다(Table 3).  
 association discrepancy를 최대화하면 시계열 연관은 이웃이 아닌 영역에 주의를 기울이도록 한다.  
-그러나 더 나은 reconstruction을 위해, 이상점은 정상 시간점보다 훨씬 큰 이웃 연관 가중치를 유지해야 합니다.  
+그러나 더 나은 reconstruction을 위해, 이상점은 정상 시간점보다 훨씬 큰 이웃 연관 가중치를 유지해야 한다.  
 이는 더 큰 대조 값을 가져온다.  
 직접 최대화는 정상과 이상 시간점 간의 차이를 효과적으로 증폭시키기 어렵다.  
 minimax 전략은 prior-association을 최적화하여 시계열 연관에 더 강력한 제약을 제공하므로, 더 구별 가능한 대조 값을 얻어 성능이 향상된다.
