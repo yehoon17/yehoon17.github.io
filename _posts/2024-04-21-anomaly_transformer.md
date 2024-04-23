@@ -13,7 +13,7 @@ math: true
 
 
 ## 개요
-시계열 이상탐지 모델에 대해 찾아보았다.  
+시계열 이상 탐지 모델에 대해 찾아보았다.  
 인용수도 준수하고 Transformer를 활용한 논문이 눈에 들어와서 읽어보기로 했다. 
 
 ### 찾아 본 영단어 
@@ -29,7 +29,7 @@ Taxonomy: 분류학
     Transformer가 전체 구간에 대한 각 시점의 해석을 가능케하나, 이상점이 드물기 때문에 연관성을 구축하기 어려워 <ins>인접한 구간에 집중</ins>한다.
     </summary>
     <blockquote>
-    비지도 방식의 시계열 이상탐지는 모델이 구별 기준을 도출해야해서 어려운 점이 있다. pointwise representation 또는 pairwise association으로 접근했던 이전 방식들과 달리, Transformer는 pointwise representation과 pairwise association를 통합하고 전체 구간에 대한 각 시점의 해석을 가능하게 한다. 하지만 이상점이 드물기 때문에 전체 구간에 대한 뾰족한 연관성을 구축하는 것은 어렵고, 따라서 <ins>인접한 구간에 집중</ins>할 것이다.
+    비지도 방식의 시계열 이상 탐지는 모델이 구별 기준을 도출해야해서 어려운 점이 있다. pointwise representation 또는 pairwise association으로 접근했던 이전 방식들과 달리, Transformer는 pointwise representation과 pairwise association를 통합하고 전체 구간에 대한 각 시점의 해석을 가능하게 한다. 하지만 이상점이 드물기 때문에 전체 구간에 대한 뾰족한 연관성을 구축하는 것은 어렵고, 따라서 <ins>인접한 구간에 집중</ins>할 것이다.
     </blockquote>
 </details>
 
@@ -38,17 +38,17 @@ Taxonomy: 분류학
     <i>Anomaly Transformer</i>은 <i>Association Discrepancy</i>를 활용하여 인접한 구간에 집중된 bias를 설정하고, 이상점에 대한 구별 가능성을 증폭시키기 위해 minimax strategy를 적용하였다.
     </summary>
     <blockquote>
-    인접한 구간에 집중된 bias는 <i>Association Discrepancy</i>로 도출하여 이상점에 대한 기준을 설정했다. 그리고 <i>Association Discrepancy</i>을 계산하기 위해 Anomaly Transformer을 제한한다. 이상점에 대한 구별 가능성을 증폭시키기 위해 minimax strategy를 Association Discrepancy에 적용했다. Anomaly Transformer는 비지도 시계열 이상탐지 벤치마크에서 SOTA를 달성했다.
+    인접한 구간에 집중된 bias는 <i>Association Discrepancy</i>로 도출하여 이상점에 대한 기준을 설정했다. 그리고 <i>Association Discrepancy</i>을 계산하기 위해 Anomaly Transformer을 제한한다. 이상점에 대한 구별 가능성을 증폭시키기 위해 minimax strategy를 Association Discrepancy에 적용했다. Anomaly Transformer는 비지도 시계열 이상 탐지 벤치마크에서 SOTA를 달성했다.
     </blockquote>
 </details>
 
 ### 1 Introduction
 <details>
     <summary>
-    시계열 이상탐지는 <ins>복잡한 시간적 역학관계</ins>에서 의미있는 특징을 추출하고 <ins>희귀한 이상점</ins>을 구별할 수 있는 기준을 도출하는 것이 관건
+    시계열 이상 탐지는 <ins>복잡한 시간적 역학관계</ins>에서 의미있는 특징을 추출하고 <ins>희귀한 이상점</ins>을 구별할 수 있는 기준을 도출하는 것이 관건
     </summary>
     <blockquote>
-    시계열에서의 이상탐지는 산업에서 중요하지만 이상점이 드물기 때문에 난이도와 비용적인 측면에서 데이터 라벨링하기 어렵다. 따라서 비지도 방식으로 눈을 돌렸지만, 복잡한 시간적 역학관계에서 의미있는 특징을 추출해야면서 희귀한 이상점을 구별할 수 있는 기준을 도출해야 하기 때문에 이 또한 어렵긴 하다. 
+    시계열에서의 이상 탐지는 산업에서 중요하지만 이상점이 드물기 때문에 난이도와 비용적인 측면에서 데이터 라벨링하기 어렵다. 따라서 비지도 방식으로 눈을 돌렸지만, 복잡한 시간적 역학관계에서 의미있는 특징을 추출해야면서 희귀한 이상점을 구별할 수 있는 기준을 도출해야 하기 때문에 이 또한 어렵긴 하다. 
     </blockquote>
 </details>
 
@@ -68,7 +68,7 @@ Taxonomy: 분류학
     <br><br>
     신경망을 활용하여 우수한 성능을 달성하였다.<br> 잘 설계된 순환 네트워크를 통해 pointwise representations을 학습하고 reconstruction 또는 autoregressive task에 의해 self-supervised되는 것에 초점을 맞추고 있다. <br>여기서의 이상점 기준은 각 시점의 reconstruction 또는 prediction error이지만, 이상점이 드물기 때문에 pointwise representation는 복잡한 시간적 패턴에 대한 정보가 부족하고 정상점들에게 우세되어 구별력이 약해질 수 있다.<br> 또한 reconstruction 또는 prediction error는 각 시점마다 계산되므로 시간적 맥락의 포괄적인 설명을 제공할 수 없다.
     <br><br>
-    explicit association modeling을 기반의 이상탐지 방법도 있다.<br> vector autoregression와 state space models 그리고 그래프를 활용하여 시계열을 각기 다른 시간 지점으로 정점으로 나타내고,random walk로 이상탐지한 방법이 이에 포함된다. 
+    explicit association modeling을 기반의 이상 탐지 방법도 있다.<br> vector autoregression와 state space models 그리고 그래프를 활용하여 시계열을 각기 다른 시간 지점으로 정점으로 나타내고,random walk로 이상 탐지한 방법이 이에 포함된다. 
     <br><br>
     일반적으로 이러한 고전적인 방법은 정보를 효과적으로 학습하고 미세한 연관성을 모델링하기 어렵다.
     <br><br>
@@ -82,7 +82,7 @@ Taxonomy: 분류학
 
 <details>
     <summary>
-    Transfomers를 비지도 시계열 이상탐지에 적용
+    Transfomers를 비지도 시계열 이상 탐지에 적용
     <ul>
         <li><i>series-association</i>: self-attention map을 통해 각 시간 점의 시간적 연관성 표현</li>
         <li><i>prior-association</i>: Gaussian kernel을 통해 인접한 시점들이 연속성에 인해 연관되는 경향 계산</li>
@@ -91,7 +91,7 @@ Taxonomy: 분류학
     </ul>
     </summary>
     <blockquote>
-    본 논문에서 우리는 Transfomers를 비지도 시계열 이상탐지에 적용할 것이다. 
+    본 논문에서 우리는 Transfomers를 비지도 시계열 이상 탐지에 적용할 것이다. 
     Transfomers는 전체적 표현 및 long-range 관계를 통합 모델링하는 능력으로 자연어 처리, machine vision 및 시계열을 포함한 다양한 분야에서 큰 진전을 이루었다.
     <br><br>
     시계열에 Transfomers를 적용하면 각 시간 점의 시간적 연관성을 self-attention map에서 얻을 수 있으며, 이는 시간적 차원을 따라 모든 시간 점에 대한 연관성 가중치의 분포로 표현하게 된다.<br> 
@@ -115,7 +115,7 @@ Taxonomy: 분류학
 ### 2 Related Work
 
 #### 2.1 Unsupervised Time Series Anomaly Detection
-비지도 시계열 이상탐지 방법은 density estimation, clustering-based, reconstruction-based, autoregression-based와 같은 네 가지 범주로 나뉜다.  
+비지도 시계열 이상 탐지 방법은 density estimation, clustering-based, reconstruction-based, autoregression-based와 같은 네 가지 범주로 나뉜다.  
 각 범주는 local density와 connectivity 계산, 클러스터 중심까지의 거리 측정, 재구성 reconstruction error 또는 미래 값을 예측하는 등의 다른 기법을 사용한다.   
 이 논문은 새로운 association-based criterion을 소개하며, temporal model co-design를 통해 정보를 효과적으로 학습하는 데 초점을 맞추었다.  
 
@@ -125,7 +125,7 @@ GTA와 같은 방법은 Transformer와 그래프를 결합하여 센서 간의 �
 Anomaly Transformer는 이러한 방법을 개선하여 self-attention 메커니즘의 변형인 Anomaly-Attention를 도입하여 데이터의 불일치를 더 잘 포착한다.
 
 ### 3 Method
-**비지도 시계열 이상탐지란,**  
+**비지도 시계열 이상 탐지란,**  
 $$d$$개의 측정값으로 이루어진 시계열 $$X = \{x_1, x_2, ..., x_N\}, x_t \in \mathbb{R}^d$$ 에서 $$x_t$$를 레이블 없이 이상치인지 판별하는 것
 
 #### 3.1 Anomaly Transformer
@@ -326,4 +326,8 @@ minimax 전략은 prior-association을 최적화하여 시계열 연관에 더 �
 Transformer를 활용하여 정보를 풍부하게 포착하기 위해 time-point association을 학습했다.  
 Anomaly-Attention과 minimax 전략을 통합하여 이상 감지를 향상시켰다.  
 이 방법은 실험적 연구에서 SOTA를 달성하며, 미래에는 이상 감지기를 autoregression 및  state space model 분석과 관련하여 이론적으로 탐구될 예정이다.
+
+--- 
+
+Next: [Anomaly Transformer(2)](https://yehoon17.github.io/posts/anomaly_transformer_2/)
 

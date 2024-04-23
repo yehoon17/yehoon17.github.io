@@ -84,7 +84,7 @@ spark.stop()
 
 PySpark의 `SparkSession`은 Python에서 Apache Spark를 사용하기 위한 시작점이다.  
  - 구조화된 데이터 작업, SQL 쿼리 실행 및 Spark 속성 구성과 같은 작업을 수행하는 통합된 인터페이스를 제공
- - Spark 리소스(예: Executor 및 메모리)를 관리하고 작업 진행 상황을 모니터링하기 위한 Spark UI에 액세스를 제공합니다. 그리고 세션은 
+ - Spark 리소스(예: Executor 및 메모리)를 관리하고 작업 진행 상황을 모니터링하기 위한 Spark UI에 액세스를 제공
  - Spark 애플리케이션의 라이프사이클을 처리하여 초기화에서 종료까지의 과정을 관리
   
 ### 상위 영화 분석
