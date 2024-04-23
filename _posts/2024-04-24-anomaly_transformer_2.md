@@ -33,9 +33,15 @@ Gaussian kernel은 이웃한 점에 가중치를 할당하며, 가까운 점은 
 Anomaly Transformer은 연속성으로 인해 이상점이 인근 시간점에서 더 자주 발생할 가능성이 높은 adjacent-concentration inductive bias을 포착할 수 있다.  
 > adjacent-concentration inductive bias: 시계열 데이터셋 내에서 이상점이 이웃하거나 인접한 시간 지점에 군집하는 경향
 
+> Unimodal(단봉성): 분포, 함수 또는 데이터 집합이 하나의 봉우리 또는 모드를 가지고 있는 것
+
 
 ### Symmetrized KL Divergence
 Kullback-Leibler(KL) divergence(이하 KL 발산)은 두 확률 분포 간의 차이를 측정하는 방법이다.
+
+$$
+D_{KL}(P \| Q) = \sum_{i} P(i) \log \frac{P(i)}{Q(i)}
+$$
 
 두 분포 $$ P $$ 와 $$ Q $$ 사이의 KL 발산은 한 분포가 다른 분포로부터 얼마나 멀어지는지를 측정한다.  
 그러나 이는 비대칭적이며, 즉 $$ KL(P \| Q) $$ 가 반드시 $$ KL(Q \| P) $$ 와 같지 않다.
@@ -56,7 +62,17 @@ $$Q$$: $$P$$ 에 노이즈 추가
 $$R$$: 랜덤 확률 분포  
 ![alt text](/assets/img/anomaly_transformer/kl_div_dist.png)  
 
-##### KL 분산 및 대칭 KL 분산 히트맵
+##### KL 분산 및 대칭 KL 분산 
+
+```python
+def kl_divergence(p, q):
+    kl_div = np.sum(np.where(p != 0, p * np.log(p / q), 0))
+    return kl_div
+
+def symmetrized_kl_divergence(p, q):
+    sym_kl_div = 0.5 * (kl_divergence(p, q) + kl_divergence(q, p))
+    return sym_kl_div
+```
 ![alt text](/assets/img/anomaly_transformer/kl_div_heatmap.png)
 
 ### Norm
