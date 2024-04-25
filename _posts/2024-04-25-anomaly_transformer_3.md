@@ -195,7 +195,7 @@ Input:
  - `keys`: $$X^{l-1} \in \mathbb{R}^{B×L×d_{\text{model}}}$$  
  - `values`: $$X^{l-1} \in \mathbb{R}^{B×L×d_{\text{model}}}$$  
 
-[AnomalyAttention](AnomalyAttention) 먼저 확인  
+[AnomalyAttention](#anomalyattention) 먼저 확인  
 
 Output: 
  - `y`: $$ \hat{X}^l W^l_{\text{out projection}} \in \mathbb{R}^{B×L×d_{\text{model}}}$$    
