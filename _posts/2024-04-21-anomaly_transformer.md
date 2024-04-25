@@ -147,7 +147,7 @@ $$
 
 여기서 $$X^l \in \mathbb{R}^{N×d_\text{model}}, l ∈ {1, ..., L}$$ 는 $$d_\text{model}$$ 채널을 가진 $$l$$번째 레이어의 출력을 나타낸다.  
 초기 입력 $$X^0 = \text{Embedding}(X)$$는 임베딩된 raw series를 나타낸다.  
-$$Z^l ∈ R^{N×d_\text{model}}$$ 는 $$l$$번째 레이어의 숨겨진 표현이다.    
+$$Z^l ∈ \mathbb{R}^{N×d_\text{model}}$$ 는 $$l$$번째 레이어의 숨겨진 표현이다.    
 $$\text{Anomaly-Attention}(·)$$은 association discrepancy을 계산하는 데 사용된다.   
 
 ##### Anomaly-Attention
