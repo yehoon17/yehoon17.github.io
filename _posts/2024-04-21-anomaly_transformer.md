@@ -251,7 +251,7 @@ $$
 reconstruction loss 하에서, 이는 이상점이 정상 시간 점보다 훨씬 어려운 것이며, 이로써 association discrepancy의 정상-이상 구별 가능성을 증폭시킨다.
 
 ##### Association-based Anomaly Criterion
-우리는 reconstruction 기준에 정규화된 association discrepancy을 통합한다. 이것은 시간적 표현과 구별 가능한 association discrepancy의 이점을 모두 취할 것이다.  
+reconstruction 기준에 정규화된 association discrepancy을 통합했다. 이건 시간적 표현과 구별 가능한 association discrepancy의 이점을 모두 취할 것이다.  
  $$X \in \mathbb{R}^{N×d} $$의 최종 이상 점수는 다음과 같이 나타난다:
 
 $$

@@ -1,6 +1,6 @@
 ---
 title: Django 기반 웹 개발(6)
-date: 2024-04-25 13:25:00 +09:00
+date: 2024-04-26 13:25:00 +09:00
 categories: [프로젝트, 웹 개발]
 author: yehoon
 tags: [Django, Backend]
