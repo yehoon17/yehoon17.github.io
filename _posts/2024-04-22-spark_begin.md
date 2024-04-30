@@ -5,6 +5,7 @@ categories: [데이터파이프라인]
 author: yehoon
 tags: [Spark,  Big Data Processing, PySpark]
 description: Apache Spark
+image: /assets/img/spark/image.png
 ---
 
 ## Apache Spark란?
