@@ -12,8 +12,6 @@ tags: [Pandas, Scikit-learn, ]
  - GridSearchCV 
  - RandomizedSearchCV
  - Bayesian Optimization
- - Hyperband
- - 유전 알고리즘
 
 ## GridSearchCV
 지정된 하이퍼파라미터 하위 집합을 탐색하는 방법
