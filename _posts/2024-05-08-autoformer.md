@@ -136,14 +136,14 @@ $$
 $$
 
  - "_": 생략되는 부분
- -  $$ \mathcal{X}^{l}_{\text{en}} = \mathcal{S}^{l, 2}_{\text{en}}$$ : $l$번째 인코더 레이어의 출력, $l \in {1, ..., N}$
+ -  $$ \mathcal{X}^{l}_{\text{en}} = \mathcal{S}^{l, 2}_{\text{en}}$$ : $l$번째 인코더 레이어의 출력, $l \in \{1, ..., N\}$
  -  $$ \mathcal{X}^{0}_{\text{en}}$$ : $ \mathcal{X}_{\text{en}}$의 임베딩
- -  $ \mathcal{S}^{l, i}_{\text{en}}$: $l$번째 레이어의  $i$번째 series decomposition block 이후의 계절 요소, $i \in {1, 2}$
+ -  $ \mathcal{S}^{l, i}_{\text{en}}$: $l$번째 레이어의  $i$번째 series decomposition block 이후의 계절 요소, $i \in \{1, 2\}$
 
 
 ##### Decoder
 ![alt text](/assets/img/autoformer/decoder.png)
- - 디코더는 2 부분으로 구성
+ - 디코더는 두 부분으로 구성
    - 추세-주기 성분을 위한 누적 구조
    - 계절 성분을 위한 stacked Auto-Correlation 메커니즘
  - 각 디코더 레이어는 *inner* Auto-Correlation 및 *encoder-decoder* Auto-Correlation을 포함
@@ -170,11 +170,11 @@ $$
 \end{equation}  
 $$
 
- - $\mathcal{X}^{l}_{\text{de}}$ : $l$번째 디코더 레이어 출력, $l \in {1, ..., M}$
+ - $\mathcal{X}^{l}_{\text{de}}$ : $l$번째 디코더 레이어 출력, $l \in \{1, ..., M\}$
  - $$\mathcal{X}_{\text{de}}^{0}$$ : $$\mathcal{X}_{\text{des}}$$에서의 임베딩 for deep transform
  - $$\mathcal{T}_{\text{de}}^0 = \mathcal{X}_{\text{det}}$$ : for accumulation 
- - $\mathcal{S}_{\text{de}}^{l, i}$: $l$번째 레이어의 $i$번째 series decomposition block으로부터의 계절적 요소, $i \in {1,2,3}$
- - $\mathcal{T}_{\text{de}}^{l, i}$: $l$번째 레이어의 $i$번째 series decomposition block으로부터의 추세-주기 요소, $i \in {1,2,3}$
+ - $\mathcal{S}_{\text{de}}^{l, i}$: $l$번째 레이어의 $i$번째 series decomposition block으로부터의 계절적 요소, $i \in \{1,2,3\}$
+ - $\mathcal{T}_{\text{de}}^{l, i}$: $l$번째 레이어의 $i$번째 series decomposition block으로부터의 추세-주기 요소, $i \in \{1,2,3\}$
  - $$\mathcal{W}_{l, i}$$ : projector for $i$번째 추출된 추세 $$\mathcal{T}_{\text{de}}^{l, i}$$
 
 <br>
@@ -250,7 +250,7 @@ $$
 - 다중 헤드의 경우
   - $d_{\text{model}}$ 채널
   - $h$ 헤드
-  - $i$번째 헤드의 $$\mathcal{Q}_i, \mathcal{K}_i, \mathcal{V}_i \in \mathbb{R}^{L \times \frac{d_{\text{model}}}{h} } , i \in {1, ..., h}$$
+  - $i$번째 헤드의 $$\mathcal{Q}_i, \mathcal{K}_i, \mathcal{V}_i \in \mathbb{R}^{L \times \frac{d_{\text{model}}}{h} } , i \in \{1, ..., h\}$$
 
 $$
 \begin{equation}  
@@ -281,7 +281,7 @@ $$
 \end{equation}  
 $$
 
-- $ \tau \in {1, ..., L}$
+- $ \tau \in \{1, ..., L\}$
 - $\mathcal{F}$ : FFT
 - $\mathcal{F}^{-1}$: FFT inverse
 - $\ast$:  conjugate operation
