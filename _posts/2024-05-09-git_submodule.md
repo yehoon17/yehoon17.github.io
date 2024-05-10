@@ -3,7 +3,7 @@ title: Git Submodule
 date: 2024-05-09 09:00:00 +09:00
 categories: [Git]
 author: yehoon
-tags: [Version Control]
+tags: [Version Control, Submodule]
 ---
 
 ## Git Submodule이란?
