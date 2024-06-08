@@ -1,5 +1,5 @@
 ---
-title: Oauth 2.0 구현
+title: OAuth 2.0 구현
 date: 2024-06-07 13:00:00 +09:00
 categories: [Backend]
 author: yehoon
@@ -7,10 +7,10 @@ tags: [Authentication, Django, Flask]
 image: /assets/img/oauth/thumbnail.png
 ---
 
-1. Django 기반 웹을 Resource Owner로서 Oauth 2.0 기능 구현  
+1. Django 기반 웹을 Resource Owner로서 OAuth 2.0 기능 구현  
 2. OAuth 2.0을 Flask 앱에 Client로서 구현  
 
-## 1. Django 기반 웹에 Oauth 2.0 기능 구현
+## 1. Django 기반 웹에 OAuth 2.0 기능 구현
 ### 1.1. Django OAuth Toolkit 설치
 ```bash
 pip install django-oauth-toolkit
