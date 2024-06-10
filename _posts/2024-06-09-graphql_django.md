@@ -1,6 +1,6 @@
 ---
 title: Django에 GraphQL 구현하기
-date: 2024-06-09 10:00:00 +09:00
+date: 2024-06-09 11:00:00 +09:00
 categories: [Backend]
 author: yehoon
 tags: [API, Django]
