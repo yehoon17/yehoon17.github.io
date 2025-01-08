@@ -28,7 +28,7 @@ df.info()
 ![](/assets/img/cohort/df_info.png)
 
 
-#### 전처리 및 코호트 데이터 생성성
+#### 전처리 및 코호트 데이터 생성
 ```python 
 # 처음으로 활동한 시간과 활동 기간 도출
 df['first_activity_date'] = df['date'] - pd.to_timedelta(df['tenure'], unit='D')
